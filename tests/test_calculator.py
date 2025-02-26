@@ -10,15 +10,16 @@ Using Pytest to test:
 import pytest
 from app.calculator import add, subtract, multiply, divide
 
-# Parametrized tests to cover multiple test cases
+
 @pytest.mark.parametrize("a, b, expected", [
-    (1, 2, 3), 
-    (-1, 1, 0), 
+    (1, 2, 3),
+    (-1, 1, 0),
     (0, 0, 0)
 ])
 def test_add(a, b, expected):
     """Test addition function"""
     assert add(a, b) == expected
+
 
 @pytest.mark.parametrize("a, b, expected", [
     (5, 3, 2),
@@ -29,14 +30,16 @@ def test_subtract(a, b, expected):
     """Test subtraction function"""
     assert subtract(a, b) == expected
 
+
 @pytest.mark.parametrize("a, b, expected", [
-    (2, 3, 6), 
-    (-1, -1, 1), 
+    (2, 3, 6),
+    (-1, -1, 1),
     (0, 10, 0)
 ])
 def test_multiply(a, b, expected):
     """Test multiplication function"""
     assert multiply(a, b) == expected
+
 
 def test_divide():
     """Test division function, including division by zero"""
