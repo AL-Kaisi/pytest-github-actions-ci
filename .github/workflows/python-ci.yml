@@ -25,5 +25,5 @@ jobs:
         run: pytest --cov=app tests/  # Run tests with coverage
 
       - name: Run Flake8
-      run: |
-        flake8 app/ --count --max-line-length=88 --show-source --statistics
+        run: |
+          flake8 app/ --count --max-line-length=88 --show-source --statistics
